@@ -1,0 +1,597 @@
+
+data/binary.elf:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+00008000 <key_expansion_check_flow>:
+    8000:	f8df 65b8 	ldr.w	r6, [pc, #1464]	; 85bc <AES_ECB_encrypt+0x4c>
+    8004:	ea87 0706 	eor.w	r7, r7, r6
+    8008:	f8df 55b4 	ldr.w	r5, [pc, #1460]	; 85c0 <AES_ECB_encrypt+0x50>
+    800c:	f3ef 8600 	mrs	r6, CPSR
+    8010:	42bd      	cmp	r5, r7
+    8012:	f040 829b 	bne.w	854c <report_error>
+    8016:	f386 8800 	msr	CPSR_f, r6
+
+0000801a <key_expansion>:
+    801a:	4603      	mov	r3, r0
+    801c:	e92d 4110 	stmdb	sp!, {r4, r8, lr}
+    8020:	f101 0210 	add.w	r2, r1, #16
+    8024:	f8df 659c 	ldr.w	r6, [pc, #1436]	; 85c4 <AES_ECB_encrypt+0x54>
+    8028:	ea87 0706 	eor.w	r7, r7, r6
+    802c:	f04f 0600 	mov.w	r6, #0
+    8030:	f8df 5594 	ldr.w	r5, [pc, #1428]	; 85c8 <AES_ECB_encrypt+0x58>
+    8034:	f3ef 8600 	mrs	r6, CPSR
+    8038:	42bd      	cmp	r5, r7
+    803a:	f040 8287 	bne.w	854c <report_error>
+    803e:	f386 8800 	msr	CPSR_f, r6
+    8042:	780c      	ldrb	r4, [r1, #0]
+    8044:	3104      	adds	r1, #4
+    8046:	701c      	strb	r4, [r3, #0]
+    8048:	f811 4c03 	ldrb.w	r4, [r1, #-3]
+    804c:	3304      	adds	r3, #4
+    804e:	f803 4c03 	strb.w	r4, [r3, #-3]
+    8052:	f811 4c02 	ldrb.w	r4, [r1, #-2]
+    8056:	f803 4c02 	strb.w	r4, [r3, #-2]
+    805a:	f811 4c01 	ldrb.w	r4, [r1, #-1]
+    805e:	4291      	cmp	r1, r2
+    8060:	f803 4c01 	strb.w	r4, [r3, #-1]
+    8064:	f04f 0600 	mov.w	r6, #0
+    8068:	d1de      	bne.n	8028 <key_expansion+0xe>
+    806a:	f8df 6560 	ldr.w	r6, [pc, #1376]	; 85cc <AES_ECB_encrypt+0x5c>
+    806e:	ea87 0706 	eor.w	r7, r7, r6
+    8072:	f8df 555c 	ldr.w	r5, [pc, #1372]	; 85d0 <AES_ECB_encrypt+0x60>
+    8076:	f3ef 8600 	mrs	r6, CPSR
+    807a:	42bd      	cmp	r5, r7
+    807c:	f040 8266 	bne.w	854c <report_error>
+    8080:	f386 8800 	msr	CPSR_f, r6
+    8084:	2204      	movs	r2, #4
+    8086:	f8df c0e0 	ldr.w	ip, [pc, #224]	; 8168 <key_expansion+0x14e>
+    808a:	f04f 0600 	mov.w	r6, #0
+    808e:	ea87 0706 	eor.w	r7, r7, r6
+    8092:	f8df 6540 	ldr.w	r6, [pc, #1344]	; 85d4 <AES_ECB_encrypt+0x64>
+    8096:	ea87 0706 	eor.w	r7, r7, r6
+    809a:	f8df 553c 	ldr.w	r5, [pc, #1340]	; 85d8 <AES_ECB_encrypt+0x68>
+    809e:	f3ef 8600 	mrs	r6, CPSR
+    80a2:	42bd      	cmp	r5, r7
+    80a4:	f040 8252 	bne.w	854c <report_error>
+    80a8:	f386 8800 	msr	CPSR_f, r6
+    80ac:	f012 0f03 	tst.w	r2, #3
+    80b0:	7b03      	ldrb	r3, [r0, #12]
+    80b2:	f890 e00d 	ldrb.w	lr, [r0, #13]
+    80b6:	7b84      	ldrb	r4, [r0, #14]
+    80b8:	7bc1      	ldrb	r1, [r0, #15]
+    80ba:	f8df 6520 	ldr.w	r6, [pc, #1312]	; 85dc <AES_ECB_encrypt+0x6c>
+    80be:	d11c      	bne.n	80fa <key_expansion+0xe0>
+    80c0:	f8df 6518 	ldr.w	r6, [pc, #1304]	; 85dc <AES_ECB_encrypt+0x6c>
+    80c4:	ea87 0706 	eor.w	r7, r7, r6
+    80c8:	f8df 5514 	ldr.w	r5, [pc, #1300]	; 85e0 <AES_ECB_encrypt+0x70>
+    80cc:	f3ef 8600 	mrs	r6, CPSR
+    80d0:	42bd      	cmp	r5, r7
+    80d2:	f040 823b 	bne.w	854c <report_error>
+    80d6:	f386 8800 	msr	CPSR_f, r6
+    80da:	f81c 800e 	ldrb.w	r8, [ip, lr]
+    80de:	f81c e004 	ldrb.w	lr, [ip, r4]
+    80e2:	f81c 4001 	ldrb.w	r4, [ip, r1]
+    80e6:	f81c 1003 	ldrb.w	r1, [ip, r3]
+    80ea:	eb0c 0392 	add.w	r3, ip, r2, lsr #2
+    80ee:	f893 3100 	ldrb.w	r3, [r3, #256]	; 0x100
+    80f2:	ea88 0303 	eor.w	r3, r8, r3
+    80f6:	f04f 0600 	mov.w	r6, #0
+    80fa:	ea87 0706 	eor.w	r7, r7, r6
+    80fe:	f8df 64e4 	ldr.w	r6, [pc, #1252]	; 85e4 <AES_ECB_encrypt+0x74>
+    8102:	ea87 0706 	eor.w	r7, r7, r6
+    8106:	f8df 54e0 	ldr.w	r5, [pc, #1248]	; 85e8 <AES_ECB_encrypt+0x78>
+    810a:	f3ef 8600 	mrs	r6, CPSR
+    810e:	42bd      	cmp	r5, r7
+    8110:	f040 821c 	bne.w	854c <report_error>
+    8114:	f386 8800 	msr	CPSR_f, r6
+    8118:	f890 8000 	ldrb.w	r8, [r0]
+    811c:	3201      	adds	r2, #1
+    811e:	ea83 0308 	eor.w	r3, r3, r8
+    8122:	7403      	strb	r3, [r0, #16]
+    8124:	7843      	ldrb	r3, [r0, #1]
+    8126:	2a2c      	cmp	r2, #44	; 0x2c
+    8128:	ea8e 0e03 	eor.w	lr, lr, r3
+    812c:	7883      	ldrb	r3, [r0, #2]
+    812e:	f880 e011 	strb.w	lr, [r0, #17]
+    8132:	ea84 0403 	eor.w	r4, r4, r3
+    8136:	78c3      	ldrb	r3, [r0, #3]
+    8138:	7484      	strb	r4, [r0, #18]
+    813a:	ea81 0103 	eor.w	r1, r1, r3
+    813e:	74c1      	strb	r1, [r0, #19]
+    8140:	f100 0004 	add.w	r0, r0, #4
+    8144:	f8df 64a4 	ldr.w	r6, [pc, #1188]	; 85ec <AES_ECB_encrypt+0x7c>
+    8148:	d1a1      	bne.n	808e <key_expansion+0x74>
+    814a:	f8df 64a4 	ldr.w	r6, [pc, #1188]	; 85f0 <AES_ECB_encrypt+0x80>
+    814e:	ea87 0706 	eor.w	r7, r7, r6
+    8152:	f8df 54a0 	ldr.w	r5, [pc, #1184]	; 85f4 <AES_ECB_encrypt+0x84>
+    8156:	f3ef 8600 	mrs	r6, CPSR
+    815a:	42bd      	cmp	r5, r7
+    815c:	f040 81f6 	bne.w	854c <report_error>
+    8160:	f386 8800 	msr	CPSR_f, r6
+    8164:	e8bd 8110 	ldmia.w	sp!, {r4, r8, pc}
+    8168:	000086cc 	.word	0x000086cc
+
+0000816c <add_round_key_check_flow>:
+    816c:	ea87 0706 	eor.w	r7, r7, r6
+    8170:	f8df 6484 	ldr.w	r6, [pc, #1156]	; 85f8 <AES_ECB_encrypt+0x88>
+    8174:	ea87 0706 	eor.w	r7, r7, r6
+    8178:	f8df 5480 	ldr.w	r5, [pc, #1152]	; 85fc <AES_ECB_encrypt+0x8c>
+    817c:	f3ef 8600 	mrs	r6, CPSR
+    8180:	42bd      	cmp	r5, r7
+    8182:	f040 81e3 	bne.w	854c <report_error>
+    8186:	f386 8800 	msr	CPSR_f, r6
+
+0000818a <add_round_key>:
+    818a:	b510      	push	{r4, lr}
+    818c:	eb02 1200 	add.w	r2, r2, r0, lsl #4
+    8190:	1d0c      	adds	r4, r1, #4
+    8192:	3114      	adds	r1, #20
+    8194:	f8df 6468 	ldr.w	r6, [pc, #1128]	; 8600 <AES_ECB_encrypt+0x90>
+    8198:	ea87 0706 	eor.w	r7, r7, r6
+    819c:	f8df 6464 	ldr.w	r6, [pc, #1124]	; 8604 <AES_ECB_encrypt+0x94>
+    81a0:	ea87 0706 	eor.w	r7, r7, r6
+    81a4:	f8df 5460 	ldr.w	r5, [pc, #1120]	; 8608 <AES_ECB_encrypt+0x98>
+    81a8:	f3ef 8600 	mrs	r6, CPSR
+    81ac:	42bd      	cmp	r5, r7
+    81ae:	f040 81cd 	bne.w	854c <report_error>
+    81b2:	f386 8800 	msr	CPSR_f, r6
+    81b6:	4696      	mov	lr, r2
+    81b8:	1f23      	subs	r3, r4, #4
+    81ba:	f04f 0600 	mov.w	r6, #0
+    81be:	ea87 0706 	eor.w	r7, r7, r6
+    81c2:	f8df 6448 	ldr.w	r6, [pc, #1096]	; 860c <AES_ECB_encrypt+0x9c>
+    81c6:	ea87 0706 	eor.w	r7, r7, r6
+    81ca:	f8df 5444 	ldr.w	r5, [pc, #1092]	; 8610 <AES_ECB_encrypt+0xa0>
+    81ce:	f3ef 8600 	mrs	r6, CPSR
+    81d2:	42bd      	cmp	r5, r7
+    81d4:	f040 81ba 	bne.w	854c <report_error>
+    81d8:	f386 8800 	msr	CPSR_f, r6
+    81dc:	f81e 0b01 	ldrb.w	r0, [lr], #1
+    81e0:	f893 c000 	ldrb.w	ip, [r3]
+    81e4:	ea80 000c 	eor.w	r0, r0, ip
+    81e8:	f803 0b01 	strb.w	r0, [r3], #1
+    81ec:	42a3      	cmp	r3, r4
+    81ee:	f8df 641c 	ldr.w	r6, [pc, #1052]	; 860c <AES_ECB_encrypt+0x9c>
+    81f2:	d1e4      	bne.n	81be <add_round_key+0x34>
+    81f4:	f8df 641c 	ldr.w	r6, [pc, #1052]	; 8614 <AES_ECB_encrypt+0xa4>
+    81f8:	ea87 0706 	eor.w	r7, r7, r6
+    81fc:	f8df 5418 	ldr.w	r5, [pc, #1048]	; 8618 <AES_ECB_encrypt+0xa8>
+    8200:	f3ef 8600 	mrs	r6, CPSR
+    8204:	42bd      	cmp	r5, r7
+    8206:	f040 81a1 	bne.w	854c <report_error>
+    820a:	f386 8800 	msr	CPSR_f, r6
+    820e:	1d1c      	adds	r4, r3, #4
+    8210:	428c      	cmp	r4, r1
+    8212:	f102 0204 	add.w	r2, r2, #4
+    8216:	f04f 0600 	mov.w	r6, #0
+    821a:	d1bd      	bne.n	8198 <add_round_key+0xe>
+    821c:	4eff      	ldr	r6, [pc, #1020]	; (861c <AES_ECB_encrypt+0xac>)
+    821e:	ea87 0706 	eor.w	r7, r7, r6
+    8222:	4dff      	ldr	r5, [pc, #1020]	; (8620 <AES_ECB_encrypt+0xb0>)
+    8224:	f3ef 8600 	mrs	r6, CPSR
+    8228:	42bd      	cmp	r5, r7
+    822a:	f040 818f 	bne.w	854c <report_error>
+    822e:	f386 8800 	msr	CPSR_f, r6
+    8232:	bd10      	pop	{r4, pc}
+
+00008234 <cipher_check_flow>:
+    8234:	4efb      	ldr	r6, [pc, #1004]	; (8624 <AES_ECB_encrypt+0xb4>)
+    8236:	ea87 0706 	eor.w	r7, r7, r6
+    823a:	4dfb      	ldr	r5, [pc, #1004]	; (8628 <AES_ECB_encrypt+0xb8>)
+    823c:	f3ef 8600 	mrs	r6, CPSR
+    8240:	42bd      	cmp	r5, r7
+    8242:	f040 8183 	bne.w	854c <report_error>
+    8246:	f386 8800 	msr	CPSR_f, r6
+
+0000824a <cipher>:
+    824a:	e92d 4f10 	stmdb	sp!, {r4, r8, r9, sl, fp, lr}
+    824e:	b086      	sub	sp, #24
+    8250:	9104      	str	r1, [sp, #16]
+    8252:	460a      	mov	r2, r1
+    8254:	4604      	mov	r4, r0
+    8256:	4601      	mov	r1, r0
+    8258:	2000      	movs	r0, #0
+    825a:	4ef4      	ldr	r6, [pc, #976]	; (862c <AES_ECB_encrypt+0xbc>)
+    825c:	f7ff ff86 	bl	816c <add_round_key_check_flow>
+    8260:	4ef3      	ldr	r6, [pc, #972]	; (8630 <AES_ECB_encrypt+0xc0>)
+    8262:	ea87 0706 	eor.w	r7, r7, r6
+    8266:	4df3      	ldr	r5, [pc, #972]	; (8634 <AES_ECB_encrypt+0xc4>)
+    8268:	f3ef 8600 	mrs	r6, CPSR
+    826c:	42bd      	cmp	r5, r7
+    826e:	f040 816d 	bne.w	854c <report_error>
+    8272:	f386 8800 	msr	CPSR_f, r6
+    8276:	f04f 0901 	mov.w	r9, #1
+    827a:	f04f 0600 	mov.w	r6, #0
+    827e:	ea87 0706 	eor.w	r7, r7, r6
+    8282:	4eed      	ldr	r6, [pc, #948]	; (8638 <AES_ECB_encrypt+0xc8>)
+    8284:	ea87 0706 	eor.w	r7, r7, r6
+    8288:	4dec      	ldr	r5, [pc, #944]	; (863c <AES_ECB_encrypt+0xcc>)
+    828a:	f3ef 8600 	mrs	r6, CPSR
+    828e:	42bd      	cmp	r5, r7
+    8290:	f040 815c 	bne.w	854c <report_error>
+    8294:	f386 8800 	msr	CPSR_f, r6
+    8298:	46a2      	mov	sl, r4
+    829a:	1d22      	adds	r2, r4, #4
+    829c:	46a0      	mov	r8, r4
+    829e:	f04f 0600 	mov.w	r6, #0
+    82a2:	e026      	b.n	82f2 <cipher+0xa8>
+    82a4:	ea87 0706 	eor.w	r7, r7, r6
+    82a8:	f04f 0600 	mov.w	r6, #0
+    82ac:	4de4      	ldr	r5, [pc, #912]	; (8640 <AES_ECB_encrypt+0xd0>)
+    82ae:	f3ef 8600 	mrs	r6, CPSR
+    82b2:	42bd      	cmp	r5, r7
+    82b4:	f040 814a 	bne.w	854c <report_error>
+    82b8:	f386 8800 	msr	CPSR_f, r6
+    82bc:	f818 1023 	ldrb.w	r1, [r8, r3, lsl #2]
+    82c0:	48a1      	ldr	r0, [pc, #644]	; (8548 <cipher+0x2fe>)
+    82c2:	5c41      	ldrb	r1, [r0, r1]
+    82c4:	f808 1023 	strb.w	r1, [r8, r3, lsl #2]
+    82c8:	3301      	adds	r3, #1
+    82ca:	2b04      	cmp	r3, #4
+    82cc:	f04f 0600 	mov.w	r6, #0
+    82d0:	d1e8      	bne.n	82a4 <cipher+0x5a>
+    82d2:	4edc      	ldr	r6, [pc, #880]	; (8644 <AES_ECB_encrypt+0xd4>)
+    82d4:	ea87 0706 	eor.w	r7, r7, r6
+    82d8:	4ddb      	ldr	r5, [pc, #876]	; (8648 <AES_ECB_encrypt+0xd8>)
+    82da:	f3ef 8600 	mrs	r6, CPSR
+    82de:	42bd      	cmp	r5, r7
+    82e0:	f040 8134 	bne.w	854c <report_error>
+    82e4:	f386 8800 	msr	CPSR_f, r6
+    82e8:	f108 0801 	add.w	r8, r8, #1
+    82ec:	4542      	cmp	r2, r8
+    82ee:	d010      	beq.n	8312 <cipher+0xc8>
+    82f0:	4ed6      	ldr	r6, [pc, #856]	; (864c <AES_ECB_encrypt+0xdc>)
+    82f2:	ea87 0706 	eor.w	r7, r7, r6
+    82f6:	4ed6      	ldr	r6, [pc, #856]	; (8650 <AES_ECB_encrypt+0xe0>)
+    82f8:	ea87 0706 	eor.w	r7, r7, r6
+    82fc:	4dd5      	ldr	r5, [pc, #852]	; (8654 <AES_ECB_encrypt+0xe4>)
+    82fe:	f3ef 8600 	mrs	r6, CPSR
+    8302:	42bd      	cmp	r5, r7
+    8304:	f040 8122 	bne.w	854c <report_error>
+    8308:	f386 8800 	msr	CPSR_f, r6
+    830c:	2300      	movs	r3, #0
+    830e:	4ed2      	ldr	r6, [pc, #840]	; (8658 <AES_ECB_encrypt+0xe8>)
+    8310:	e7c8      	b.n	82a4 <cipher+0x5a>
+    8312:	4ed2      	ldr	r6, [pc, #840]	; (865c <AES_ECB_encrypt+0xec>)
+    8314:	ea87 0706 	eor.w	r7, r7, r6
+    8318:	4dd1      	ldr	r5, [pc, #836]	; (8660 <AES_ECB_encrypt+0xf0>)
+    831a:	f3ef 8600 	mrs	r6, CPSR
+    831e:	42bd      	cmp	r5, r7
+    8320:	f040 8114 	bne.w	854c <report_error>
+    8324:	f386 8800 	msr	CPSR_f, r6
+    8328:	7962      	ldrb	r2, [r4, #5]
+    832a:	7863      	ldrb	r3, [r4, #1]
+    832c:	7062      	strb	r2, [r4, #1]
+    832e:	7a62      	ldrb	r2, [r4, #9]
+    8330:	7162      	strb	r2, [r4, #5]
+    8332:	7b62      	ldrb	r2, [r4, #13]
+    8334:	7363      	strb	r3, [r4, #13]
+    8336:	7262      	strb	r2, [r4, #9]
+    8338:	7aa2      	ldrb	r2, [r4, #10]
+    833a:	78a3      	ldrb	r3, [r4, #2]
+    833c:	70a2      	strb	r2, [r4, #2]
+    833e:	7ba2      	ldrb	r2, [r4, #14]
+    8340:	72a3      	strb	r3, [r4, #10]
+    8342:	79a3      	ldrb	r3, [r4, #6]
+    8344:	71a2      	strb	r2, [r4, #6]
+    8346:	7be2      	ldrb	r2, [r4, #15]
+    8348:	73a3      	strb	r3, [r4, #14]
+    834a:	78e3      	ldrb	r3, [r4, #3]
+    834c:	70e2      	strb	r2, [r4, #3]
+    834e:	7ae2      	ldrb	r2, [r4, #11]
+    8350:	73e2      	strb	r2, [r4, #15]
+    8352:	79e2      	ldrb	r2, [r4, #7]
+    8354:	71e3      	strb	r3, [r4, #7]
+    8356:	f104 0310 	add.w	r3, r4, #16
+    835a:	9305      	str	r3, [sp, #20]
+    835c:	4623      	mov	r3, r4
+    835e:	72e2      	strb	r2, [r4, #11]
+    8360:	f04f 0600 	mov.w	r6, #0
+    8364:	ea87 0706 	eor.w	r7, r7, r6
+    8368:	4ebe      	ldr	r6, [pc, #760]	; (8664 <AES_ECB_encrypt+0xf4>)
+    836a:	ea87 0706 	eor.w	r7, r7, r6
+    836e:	4dbe      	ldr	r5, [pc, #760]	; (8668 <AES_ECB_encrypt+0xf8>)
+    8370:	f3ef 8600 	mrs	r6, CPSR
+    8374:	42bd      	cmp	r5, r7
+    8376:	f040 80e9 	bne.w	854c <report_error>
+    837a:	f386 8800 	msr	CPSR_f, r6
+    837e:	781a      	ldrb	r2, [r3, #0]
+    8380:	7859      	ldrb	r1, [r3, #1]
+    8382:	f893 e002 	ldrb.w	lr, [r3, #2]
+    8386:	ea82 0c01 	eor.w	ip, r2, r1
+    838a:	9201      	str	r2, [sp, #4]
+    838c:	78da      	ldrb	r2, [r3, #3]
+    838e:	3304      	adds	r3, #4
+    8390:	9202      	str	r2, [sp, #8]
+    8392:	ea8e 0202 	eor.w	r2, lr, r2
+    8396:	ea8c 0002 	eor.w	r0, ip, r2
+    839a:	9203      	str	r2, [sp, #12]
+    839c:	ea4f 12dc 	mov.w	r2, ip, lsr #7
+    83a0:	ea4f 0b42 	mov.w	fp, r2, lsl #1
+    83a4:	445a      	add	r2, fp
+    83a6:	eb02 02c2 	add.w	r2, r2, r2, lsl #3
+    83aa:	ea82 0c4c 	eor.w	ip, r2, ip, lsl #1
+    83ae:	9a01      	ldr	r2, [sp, #4]
+    83b0:	4042      	eors	r2, r0
+    83b2:	ea8c 0c02 	eor.w	ip, ip, r2
+    83b6:	f803 cc04 	strb.w	ip, [r3, #-4]
+    83ba:	ea81 0c0e 	eor.w	ip, r1, lr
+    83be:	ea4f 12dc 	mov.w	r2, ip, lsr #7
+    83c2:	ea4f 0b42 	mov.w	fp, r2, lsl #1
+    83c6:	445a      	add	r2, fp
+    83c8:	eb02 02c2 	add.w	r2, r2, r2, lsl #3
+    83cc:	4041      	eors	r1, r0
+    83ce:	ea82 024c 	eor.w	r2, r2, ip, lsl #1
+    83d2:	404a      	eors	r2, r1
+    83d4:	f803 2c03 	strb.w	r2, [r3, #-3]
+    83d8:	9a03      	ldr	r2, [sp, #12]
+    83da:	ea8e 0e00 	eor.w	lr, lr, r0
+    83de:	09d2      	lsrs	r2, r2, #7
+    83e0:	0051      	lsls	r1, r2, #1
+    83e2:	440a      	add	r2, r1
+    83e4:	9903      	ldr	r1, [sp, #12]
+    83e6:	eb02 02c2 	add.w	r2, r2, r2, lsl #3
+    83ea:	ea82 0241 	eor.w	r2, r2, r1, lsl #1
+    83ee:	ea82 020e 	eor.w	r2, r2, lr
+    83f2:	f803 2c02 	strb.w	r2, [r3, #-2]
+    83f6:	9902      	ldr	r1, [sp, #8]
+    83f8:	9a01      	ldr	r2, [sp, #4]
+    83fa:	4051      	eors	r1, r2
+    83fc:	09ca      	lsrs	r2, r1, #7
+    83fe:	ea4f 0e42 	mov.w	lr, r2, lsl #1
+    8402:	4472      	add	r2, lr
+    8404:	eb02 02c2 	add.w	r2, r2, r2, lsl #3
+    8408:	ea82 0241 	eor.w	r2, r2, r1, lsl #1
+    840c:	9902      	ldr	r1, [sp, #8]
+    840e:	4048      	eors	r0, r1
+    8410:	4042      	eors	r2, r0
+    8412:	f803 2c01 	strb.w	r2, [r3, #-1]
+    8416:	9a05      	ldr	r2, [sp, #20]
+    8418:	429a      	cmp	r2, r3
+    841a:	4e92      	ldr	r6, [pc, #584]	; (8664 <AES_ECB_encrypt+0xf4>)
+    841c:	d1a2      	bne.n	8364 <cipher+0x11a>
+    841e:	4e93      	ldr	r6, [pc, #588]	; (866c <AES_ECB_encrypt+0xfc>)
+    8420:	ea87 0706 	eor.w	r7, r7, r6
+    8424:	4d92      	ldr	r5, [pc, #584]	; (8670 <AES_ECB_encrypt+0x100>)
+    8426:	f3ef 8600 	mrs	r6, CPSR
+    842a:	42bd      	cmp	r5, r7
+    842c:	f040 808e 	bne.w	854c <report_error>
+    8430:	f386 8800 	msr	CPSR_f, r6
+    8434:	4648      	mov	r0, r9
+    8436:	f109 0901 	add.w	r9, r9, #1
+    843a:	9a04      	ldr	r2, [sp, #16]
+    843c:	4621      	mov	r1, r4
+    843e:	fa5f f989 	uxtb.w	r9, r9
+    8442:	f04f 0600 	mov.w	r6, #0
+    8446:	f7ff fe91 	bl	816c <add_round_key_check_flow>
+    844a:	4e8a      	ldr	r6, [pc, #552]	; (8674 <AES_ECB_encrypt+0x104>)
+    844c:	ea87 0706 	eor.w	r7, r7, r6
+    8450:	4d89      	ldr	r5, [pc, #548]	; (8678 <AES_ECB_encrypt+0x108>)
+    8452:	f3ef 8600 	mrs	r6, CPSR
+    8456:	42bd      	cmp	r5, r7
+    8458:	f040 8078 	bne.w	854c <report_error>
+    845c:	f386 8800 	msr	CPSR_f, r6
+    8460:	f1b9 0f0a 	cmp.w	r9, #10
+    8464:	4e85      	ldr	r6, [pc, #532]	; (867c <AES_ECB_encrypt+0x10c>)
+    8466:	f47f af0a 	bne.w	827e <cipher+0x34>
+    846a:	4e85      	ldr	r6, [pc, #532]	; (8680 <AES_ECB_encrypt+0x110>)
+    846c:	ea87 0706 	eor.w	r7, r7, r6
+    8470:	4d84      	ldr	r5, [pc, #528]	; (8684 <AES_ECB_encrypt+0x114>)
+    8472:	f3ef 8600 	mrs	r6, CPSR
+    8476:	42bd      	cmp	r5, r7
+    8478:	f040 8068 	bne.w	854c <report_error>
+    847c:	f386 8800 	msr	CPSR_f, r6
+    8480:	4a31      	ldr	r2, [pc, #196]	; (8548 <cipher+0x2fe>)
+    8482:	f04f 0600 	mov.w	r6, #0
+    8486:	ea87 0706 	eor.w	r7, r7, r6
+    848a:	4e7f      	ldr	r6, [pc, #508]	; (8688 <AES_ECB_encrypt+0x118>)
+    848c:	ea87 0706 	eor.w	r7, r7, r6
+    8490:	4d7e      	ldr	r5, [pc, #504]	; (868c <AES_ECB_encrypt+0x11c>)
+    8492:	f3ef 8600 	mrs	r6, CPSR
+    8496:	42bd      	cmp	r5, r7
+    8498:	f040 8058 	bne.w	854c <report_error>
+    849c:	f386 8800 	msr	CPSR_f, r6
+    84a0:	2300      	movs	r3, #0
+    84a2:	4e7b      	ldr	r6, [pc, #492]	; (8690 <AES_ECB_encrypt+0x120>)
+    84a4:	ea87 0706 	eor.w	r7, r7, r6
+    84a8:	f04f 0600 	mov.w	r6, #0
+    84ac:	4d79      	ldr	r5, [pc, #484]	; (8694 <AES_ECB_encrypt+0x124>)
+    84ae:	f3ef 8600 	mrs	r6, CPSR
+    84b2:	42bd      	cmp	r5, r7
+    84b4:	f040 804a 	bne.w	854c <report_error>
+    84b8:	f386 8800 	msr	CPSR_f, r6
+    84bc:	f81a 1023 	ldrb.w	r1, [sl, r3, lsl #2]
+    84c0:	5c51      	ldrb	r1, [r2, r1]
+    84c2:	f80a 1023 	strb.w	r1, [sl, r3, lsl #2]
+    84c6:	3301      	adds	r3, #1
+    84c8:	2b04      	cmp	r3, #4
+    84ca:	f04f 0600 	mov.w	r6, #0
+    84ce:	d1e9      	bne.n	84a4 <cipher+0x25a>
+    84d0:	4e71      	ldr	r6, [pc, #452]	; (8698 <AES_ECB_encrypt+0x128>)
+    84d2:	ea87 0706 	eor.w	r7, r7, r6
+    84d6:	4d71      	ldr	r5, [pc, #452]	; (869c <AES_ECB_encrypt+0x12c>)
+    84d8:	f3ef 8600 	mrs	r6, CPSR
+    84dc:	42bd      	cmp	r5, r7
+    84de:	f040 8035 	bne.w	854c <report_error>
+    84e2:	f386 8800 	msr	CPSR_f, r6
+    84e6:	f10a 0a01 	add.w	sl, sl, #1
+    84ea:	45d0      	cmp	r8, sl
+    84ec:	4e6c      	ldr	r6, [pc, #432]	; (86a0 <AES_ECB_encrypt+0x130>)
+    84ee:	d1ca      	bne.n	8486 <cipher+0x23c>
+    84f0:	4e6c      	ldr	r6, [pc, #432]	; (86a4 <AES_ECB_encrypt+0x134>)
+    84f2:	ea87 0706 	eor.w	r7, r7, r6
+    84f6:	4d6c      	ldr	r5, [pc, #432]	; (86a8 <AES_ECB_encrypt+0x138>)
+    84f8:	f3ef 8600 	mrs	r6, CPSR
+    84fc:	42bd      	cmp	r5, r7
+    84fe:	f040 8025 	bne.w	854c <report_error>
+    8502:	f386 8800 	msr	CPSR_f, r6
+    8506:	4621      	mov	r1, r4
+    8508:	200a      	movs	r0, #10
+    850a:	7962      	ldrb	r2, [r4, #5]
+    850c:	7863      	ldrb	r3, [r4, #1]
+    850e:	7062      	strb	r2, [r4, #1]
+    8510:	7a62      	ldrb	r2, [r4, #9]
+    8512:	7162      	strb	r2, [r4, #5]
+    8514:	7b62      	ldrb	r2, [r4, #13]
+    8516:	7363      	strb	r3, [r4, #13]
+    8518:	7262      	strb	r2, [r4, #9]
+    851a:	7aa2      	ldrb	r2, [r4, #10]
+    851c:	78a3      	ldrb	r3, [r4, #2]
+    851e:	70a2      	strb	r2, [r4, #2]
+    8520:	7ba2      	ldrb	r2, [r4, #14]
+    8522:	72a3      	strb	r3, [r4, #10]
+    8524:	79a3      	ldrb	r3, [r4, #6]
+    8526:	71a2      	strb	r2, [r4, #6]
+    8528:	7be2      	ldrb	r2, [r4, #15]
+    852a:	73a3      	strb	r3, [r4, #14]
+    852c:	78e3      	ldrb	r3, [r4, #3]
+    852e:	70e2      	strb	r2, [r4, #3]
+    8530:	7ae2      	ldrb	r2, [r4, #11]
+    8532:	73e2      	strb	r2, [r4, #15]
+    8534:	79e2      	ldrb	r2, [r4, #7]
+    8536:	71e3      	strb	r3, [r4, #7]
+    8538:	72e2      	strb	r2, [r4, #11]
+    853a:	9a04      	ldr	r2, [sp, #16]
+    853c:	b006      	add	sp, #24
+    853e:	e8bd 4f10 	ldmia.w	sp!, {r4, r8, r9, sl, fp, lr}
+    8542:	4e5a      	ldr	r6, [pc, #360]	; (86ac <AES_ECB_encrypt+0x13c>)
+    8544:	e612      	b.n	816c <add_round_key_check_flow>
+    8546:	bf00      	nop
+    8548:	000086cc 	.word	0x000086cc
+
+0000854c <report_error>:
+    854c:	e7fe      	b.n	854c <report_error>
+
+0000854e <report_done_check_flow>:
+    854e:	ea87 0706 	eor.w	r7, r7, r6
+    8552:	4e57      	ldr	r6, [pc, #348]	; (86b0 <AES_ECB_encrypt+0x140>)
+    8554:	ea87 0706 	eor.w	r7, r7, r6
+    8558:	4d56      	ldr	r5, [pc, #344]	; (86b4 <AES_ECB_encrypt+0x144>)
+    855a:	f3ef 8600 	mrs	r6, CPSR
+    855e:	42bd      	cmp	r5, r7
+    8560:	f47f aff4 	bne.w	854c <report_error>
+    8564:	f386 8800 	msr	CPSR_f, r6
+
+00008568 <report_done>:
+    8568:	b508      	push	{r3, lr}
+    856a:	4e51      	ldr	r6, [pc, #324]	; (86b0 <AES_ECB_encrypt+0x140>)
+    856c:	f7ff ffef 	bl	854e <report_done_check_flow>
+
+00008570 <AES_ECB_encrypt>:
+    8570:	4f51      	ldr	r7, [pc, #324]	; (86b8 <AES_ECB_encrypt+0x148>)
+    8572:	460c      	mov	r4, r1
+    8574:	b500      	push	{lr}
+    8576:	b0ad      	sub	sp, #180	; 0xb4
+    8578:	4601      	mov	r1, r0
+    857a:	4668      	mov	r0, sp
+    857c:	f7ff fd40 	bl	8000 <key_expansion_check_flow>
+    8580:	4e4e      	ldr	r6, [pc, #312]	; (86bc <AES_ECB_encrypt+0x14c>)
+    8582:	ea87 0706 	eor.w	r7, r7, r6
+    8586:	4d4e      	ldr	r5, [pc, #312]	; (86c0 <AES_ECB_encrypt+0x150>)
+    8588:	f3ef 8600 	mrs	r6, CPSR
+    858c:	42bd      	cmp	r5, r7
+    858e:	f47f afdd 	bne.w	854c <report_error>
+    8592:	f386 8800 	msr	CPSR_f, r6
+    8596:	4669      	mov	r1, sp
+    8598:	4620      	mov	r0, r4
+    859a:	f7ff fe4b 	bl	8234 <cipher_check_flow>
+    859e:	4e49      	ldr	r6, [pc, #292]	; (86c4 <AES_ECB_encrypt+0x154>)
+    85a0:	ea87 0706 	eor.w	r7, r7, r6
+    85a4:	4d48      	ldr	r5, [pc, #288]	; (86c8 <AES_ECB_encrypt+0x158>)
+    85a6:	f3ef 8600 	mrs	r6, CPSR
+    85aa:	42bd      	cmp	r5, r7
+    85ac:	f47f afce 	bne.w	854c <report_error>
+    85b0:	f386 8800 	msr	CPSR_f, r6
+    85b4:	f04f 0600 	mov.w	r6, #0
+    85b8:	f7ff ffc9 	bl	854e <report_done_check_flow>
+    85bc:	0dd9c7d8 	.word	0x0dd9c7d8
+    85c0:	cca5a5a1 	.word	0xcca5a5a1
+    85c4:	ef02d4bb 	.word	0xef02d4bb
+    85c8:	23a7711a 	.word	0x23a7711a
+    85cc:	61ef2f20 	.word	0x61ef2f20
+    85d0:	42485e3a 	.word	0x42485e3a
+    85d4:	618e3f15 	.word	0x618e3f15
+    85d8:	23c6612f 	.word	0x23c6612f
+    85dc:	d4eed5d5 	.word	0xd4eed5d5
+    85e0:	f728b4fa 	.word	0xf728b4fa
+    85e4:	bf0e3289 	.word	0xbf0e3289
+    85e8:	48268673 	.word	0x48268673
+    85ec:	0a6ed849 	.word	0x0a6ed849
+    85f0:	cac46011 	.word	0xcac46011
+    85f4:	82e2e662 	.word	0x82e2e662
+    85f8:	cc37e944 	.word	0xcc37e944
+    85fc:	1846d424 	.word	0x1846d424
+    8600:	642315c1 	.word	0x642315c1
+    8604:	a449c628 	.word	0xa449c628
+    8608:	d82c07cd 	.word	0xd82c07cd
+    860c:	bab36873 	.word	0xbab36873
+    8610:	629f6fbe 	.word	0x629f6fbe
+    8614:	1efaae5b 	.word	0x1efaae5b
+    8618:	7c65c1e5 	.word	0x7c65c1e5
+    861c:	1bcc029d 	.word	0x1bcc029d
+    8620:	67a9c378 	.word	0x67a9c378
+    8624:	0b15e843 	.word	0x0b15e843
+    8628:	9e4d6e3c 	.word	0x9e4d6e3c
+    862c:	4a3c535c 	.word	0x4a3c535c
+    8630:	8cb8a4cb 	.word	0x8cb8a4cb
+    8634:	eb1167b3 	.word	0xeb1167b3
+    8638:	29182b1f 	.word	0x29182b1f
+    863c:	c2094cac 	.word	0xc2094cac
+    8640:	e3e70682 	.word	0xe3e70682
+    8644:	2b4000bb 	.word	0x2b4000bb
+    8648:	c8a70639 	.word	0xc8a70639
+    864c:	0aae4a95 	.word	0x0aae4a95
+    8650:	2a735abf 	.word	0x2a735abf
+    8654:	e87a1613 	.word	0xe87a1613
+    8658:	0b9d1091 	.word	0x0b9d1091
+    865c:	a30d926c 	.word	0xa30d926c
+    8660:	6baa9455 	.word	0x6baa9455
+    8664:	61f7bb61 	.word	0x61f7bb61
+    8668:	0a5d2f34 	.word	0x0a5d2f34
+    866c:	de2c1254 	.word	0xde2c1254
+    8670:	d4713d60 	.word	0xd4713d60
+    8674:	2a0c2471 	.word	0x2a0c2471
+    8678:	4da5e709 	.word	0x4da5e709
+    867c:	a6b480ba 	.word	0xa6b480ba
+    8680:	ba645a8e 	.word	0xba645a8e
+    8684:	f7c1bd87 	.word	0xf7c1bd87
+    8688:	76f295f1 	.word	0x76f295f1
+    868c:	81332876 	.word	0x81332876
+    8690:	b6d8f4af 	.word	0xb6d8f4af
+    8694:	37ebdcd9 	.word	0x37ebdcd9
+    8698:	4de99edd 	.word	0x4de99edd
+    869c:	7a024204 	.word	0x7a024204
+    86a0:	8dc3ff83 	.word	0x8dc3ff83
+    86a4:	21ab5dab 	.word	0x21ab5dab
+    86a8:	5ba91faf 	.word	0x5ba91faf
+    86ac:	8fd822cf 	.word	0x8fd822cf
+    86b0:	a462f18f 	.word	0xa462f18f
+    86b4:	40212ef7 	.word	0x40212ef7
+    86b8:	c17c6279 	.word	0xc17c6279
+    86bc:	17ba601d 	.word	0x17ba601d
+    86c0:	9558867f 	.word	0x9558867f
+    86c4:	83ea1c00 	.word	0x83ea1c00
+    86c8:	e443df78 	.word	0xe443df78
+
+000086cc <sbox>:
+    86cc:	7b777c63 c56f6bf2 2b670130 76abd7fe     c|w{.ko.0.g+...v
+    86dc:	7dc982ca f04759fa afa2d4ad c072a49c     ...}.YG.......r.
+    86ec:	2693fdb7 ccf73f36 f1e5a534 1531d871     ...&6?..4...q.1.
+    86fc:	c323c704 9a059618 e2801207 75b227eb     ..#..........'.u
+    870c:	1a2c8309 a05a6e1b b3d63b52 842fe329     ..,..nZ.R;..)./.
+    871c:	ed00d153 5bb1fc20 39becb6a cf584c4a     S... ..[j..9JLX.
+    872c:	fbaaefd0 85334d43 7f02f945 a89f3c50     ....CM3.E...P<..
+    873c:	8f40a351 f5389d92 21dab6bc d2f3ff10     Q.@...8....!....
+    874c:	ec130ccd 1744975f 3d7ea7c4 73195d64     ...._.D...~=d].s
+    875c:	dc4f8160 88902a22 14b8ee46 db0b5ede     `.O."*..F....^..
+    876c:	0a3a32e0 5c240649 62acd3c2 79e49591     .2:.I.$\...b...y
+    877c:	6d37c8e7 a94ed58d eaf4566c 08ae7a65     ..7m..N.lV..ez..
+    878c:	2e2578ba c6b4a61c 1f74dde8 8a8bbd4b     .x%.......t.K...
+    879c:	66b53e70 0ef60348 b9573561 9e1dc186     p>.fH...a5W.....
+    87ac:	1198f8e1 948ed969 e9871e9b df2855ce     ....i........U(.
+    87bc:	0d89a18c 6842e6bf 0f2d9941 16bb54b0     ......BhA.-..T..
+
+000087cc <rcon>:
+    87cc:	0402018d 40201008                        ...... @..6

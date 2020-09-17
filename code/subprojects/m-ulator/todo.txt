@@ -1,0 +1,13 @@
+~ UNSUPPORTED ~
+    armv6m:
+        MSR/MRS
+        CPS
+        SVC
+    ARMv7E-M = dsp extension
+    floating point extension
+    privilege modes
+    exceptions/interrupts
+
+~ TODO ~
+    disassembler
+    check  arm_functions::sign_extend for msb index

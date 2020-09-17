@@ -1,0 +1,532 @@
+
+data/binary.elf:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+00008000 <sha256>:
+    8000:	e90d 4fd0 	stmdb	sp, {r4, r6, r7, r8, r9, sl, fp, lr}
+    8004:	e90d 4fd0 	stmdb	sp, {r4, r6, r7, r8, r9, sl, fp, lr}
+    8008:	f1ad 0520 	sub.w	r5, sp, #32
+    800c:	f1ad 0520 	sub.w	r5, sp, #32
+    8010:	46ad      	mov	sp, r5
+    8012:	46ad      	mov	sp, r5
+    8014:	f5ad 75a8 	sub.w	r5, sp, #336	; 0x150
+    8018:	f5ad 75a8 	sub.w	r5, sp, #336	; 0x150
+    801c:	46ad      	mov	sp, r5
+    801e:	46ad      	mov	sp, r5
+    8020:	9002      	str	r0, [sp, #8]
+    8022:	9002      	str	r0, [sp, #8]
+    8024:	460f      	mov	r7, r1
+    8026:	460f      	mov	r7, r1
+    8028:	9101      	str	r1, [sp, #4]
+    802a:	9101      	str	r1, [sp, #4]
+    802c:	9203      	str	r2, [sp, #12]
+    802e:	9203      	str	r2, [sp, #12]
+    8030:	ac4c      	add	r4, sp, #304	; 0x130
+    8032:	ac4c      	add	r4, sp, #304	; 0x130
+    8034:	f8df 6414 	ldr.w	r6, [pc, #1044]	; 844c <sha256+0x44c>
+    8038:	f8df 6410 	ldr.w	r6, [pc, #1040]	; 844c <sha256+0x44c>
+    803c:	e896 000f 	ldmia.w	r6, {r0, r1, r2, r3}
+    8040:	e896 000f 	ldmia.w	r6, {r0, r1, r2, r3}
+    8044:	f106 0510 	add.w	r5, r6, #16
+    8048:	f106 0510 	add.w	r5, r6, #16
+    804c:	462e      	mov	r6, r5
+    804e:	462e      	mov	r6, r5
+    8050:	e884 000f 	stmia.w	r4, {r0, r1, r2, r3}
+    8054:	e884 000f 	stmia.w	r4, {r0, r1, r2, r3}
+    8058:	f104 0510 	add.w	r5, r4, #16
+    805c:	f104 0510 	add.w	r5, r4, #16
+    8060:	462c      	mov	r4, r5
+    8062:	462c      	mov	r4, r5
+    8064:	e896 000f 	ldmia.w	r6, {r0, r1, r2, r3}
+    8068:	e896 000f 	ldmia.w	r6, {r0, r1, r2, r3}
+    806c:	e884 000f 	stmia.w	r4, {r0, r1, r2, r3}
+    8070:	e884 000f 	stmia.w	r4, {r0, r1, r2, r3}
+    8074:	2f00      	cmp	r7, #0
+    8076:	2f00      	cmp	r7, #0
+    8078:	f000 81b4 	beq.w	83e4 <sha256+0x3e4>
+    807c:	f000 81b2 	beq.w	83e4 <sha256+0x3e4>
+    8080:	2300      	movs	r3, #0
+    8082:	2300      	movs	r3, #0
+    8084:	9300      	str	r3, [sp, #0]
+    8086:	9300      	str	r3, [sp, #0]
+    8088:	f10d 0e6c 	add.w	lr, sp, #108	; 0x6c
+    808c:	f10d 0e6c 	add.w	lr, sp, #108	; 0x6c
+    8090:	af3c      	add	r7, sp, #240	; 0xf0
+    8092:	af3c      	add	r7, sp, #240	; 0xf0
+    8094:	4bed      	ldr	r3, [pc, #948]	; (844c <sha256+0x44c>)
+    8096:	4bed      	ldr	r3, [pc, #948]	; (844c <sha256+0x44c>)
+    8098:	f503 768e 	add.w	r6, r3, #284	; 0x11c
+    809c:	f503 768e 	add.w	r6, r3, #284	; 0x11c
+    80a0:	a904      	add	r1, sp, #16
+    80a2:	a904      	add	r1, sp, #16
+    80a4:	f50d 7ca6 	add.w	ip, sp, #332	; 0x14c
+    80a8:	f50d 7ca6 	add.w	ip, sp, #332	; 0x14c
+    80ac:	e0e8      	b.n	8280 <sha256+0x280>
+    80ae:	e0e7      	b.n	8280 <sha256+0x280>
+    80b0:	eb04 0502 	add.w	r5, r4, r2
+    80b4:	eb04 0502 	add.w	r5, r4, r2
+    80b8:	462c      	mov	r4, r5
+    80ba:	462c      	mov	r4, r5
+    80bc:	9404      	str	r4, [sp, #16]
+    80be:	9404      	str	r4, [sp, #16]
+    80c0:	9b08      	ldr	r3, [sp, #32]
+    80c2:	9b08      	ldr	r3, [sp, #32]
+    80c4:	eb02 0503 	add.w	r5, r2, r3
+    80c8:	eb02 0503 	add.w	r5, r2, r3
+    80cc:	462a      	mov	r2, r5
+    80ce:	462a      	mov	r2, r5
+    80d0:	9208      	str	r2, [sp, #32]
+    80d2:	9208      	str	r2, [sp, #32]
+    80d4:	45b2      	cmp	sl, r6
+    80d6:	45b2      	cmp	sl, r6
+    80d8:	f000 80a0 	beq.w	821c <sha256+0x21c>
+    80dc:	f000 809e 	beq.w	821c <sha256+0x21c>
+    80e0:	9c08      	ldr	r4, [sp, #32]
+    80e2:	9c08      	ldr	r4, [sp, #32]
+    80e4:	9b0a      	ldr	r3, [sp, #40]	; 0x28
+    80e6:	9b0a      	ldr	r3, [sp, #40]	; 0x28
+    80e8:	ea23 0204 	bic.w	r2, r3, r4
+    80ec:	ea23 0204 	bic.w	r2, r3, r4
+    80f0:	9809      	ldr	r0, [sp, #36]	; 0x24
+    80f2:	9809      	ldr	r0, [sp, #36]	; 0x24
+    80f4:	ea10 0504 	ands.w	r5, r0, r4
+    80f8:	ea10 0504 	ands.w	r5, r0, r4
+    80fc:	4628      	mov	r0, r5
+    80fe:	4628      	mov	r0, r5
+    8100:	ea92 0500 	eors.w	r5, r2, r0
+    8104:	ea92 0500 	eors.w	r5, r2, r0
+    8108:	462a      	mov	r2, r5
+    810a:	462a      	mov	r2, r5
+    810c:	ea4f 23f4 	mov.w	r3, r4, ror #11
+    8110:	ea4f 23f4 	mov.w	r3, r4, ror #11
+    8114:	ea83 15b4 	eor.w	r5, r3, r4, ror #6
+    8118:	ea83 15b4 	eor.w	r5, r3, r4, ror #6
+    811c:	462b      	mov	r3, r5
+    811e:	462b      	mov	r3, r5
+    8120:	ea83 6574 	eor.w	r5, r3, r4, ror #25
+    8124:	ea83 6574 	eor.w	r5, r3, r4, ror #25
+    8128:	462b      	mov	r3, r5
+    812a:	462b      	mov	r3, r5
+    812c:	eb02 0503 	add.w	r5, r2, r3
+    8130:	eb02 0503 	add.w	r5, r2, r3
+    8134:	462a      	mov	r2, r5
+    8136:	462a      	mov	r2, r5
+    8138:	9b0b      	ldr	r3, [sp, #44]	; 0x2c
+    813a:	9b0b      	ldr	r3, [sp, #44]	; 0x2c
+    813c:	eb02 0503 	add.w	r5, r2, r3
+    8140:	eb02 0503 	add.w	r5, r2, r3
+    8144:	462a      	mov	r2, r5
+    8146:	462a      	mov	r2, r5
+    8148:	f8da 3004 	ldr.w	r3, [sl, #4]
+    814c:	f8da 3004 	ldr.w	r3, [sl, #4]
+    8150:	f10a 0504 	add.w	r5, sl, #4
+    8154:	f10a 0504 	add.w	r5, sl, #4
+    8158:	46aa      	mov	sl, r5
+    815a:	46aa      	mov	sl, r5
+    815c:	eb02 0503 	add.w	r5, r2, r3
+    8160:	eb02 0503 	add.w	r5, r2, r3
+    8164:	462a      	mov	r2, r5
+    8166:	462a      	mov	r2, r5
+    8168:	f8db 3004 	ldr.w	r3, [fp, #4]
+    816c:	f8db 3004 	ldr.w	r3, [fp, #4]
+    8170:	f10b 0504 	add.w	r5, fp, #4
+    8174:	f10b 0504 	add.w	r5, fp, #4
+    8178:	46ab      	mov	fp, r5
+    817a:	46ab      	mov	fp, r5
+    817c:	eb02 0503 	add.w	r5, r2, r3
+    8180:	eb02 0503 	add.w	r5, r2, r3
+    8184:	462a      	mov	r2, r5
+    8186:	462a      	mov	r2, r5
+    8188:	f8dd 9010 	ldr.w	r9, [sp, #16]
+    818c:	f8dd 9010 	ldr.w	r9, [sp, #16]
+    8190:	9805      	ldr	r0, [sp, #20]
+    8192:	9805      	ldr	r0, [sp, #20]
+    8194:	f8dd 8018 	ldr.w	r8, [sp, #24]
+    8198:	f8dd 8018 	ldr.w	r8, [sp, #24]
+    819c:	ea4f 3379 	mov.w	r3, r9, ror #13
+    81a0:	ea4f 3379 	mov.w	r3, r9, ror #13
+    81a4:	ea83 05b9 	eor.w	r5, r3, r9, ror #2
+    81a8:	ea83 05b9 	eor.w	r5, r3, r9, ror #2
+    81ac:	462b      	mov	r3, r5
+    81ae:	462b      	mov	r3, r5
+    81b0:	ea83 55b9 	eor.w	r5, r3, r9, ror #22
+    81b4:	ea83 55b9 	eor.w	r5, r3, r9, ror #22
+    81b8:	462b      	mov	r3, r5
+    81ba:	462b      	mov	r3, r5
+    81bc:	ea88 0400 	eor.w	r4, r8, r0
+    81c0:	ea88 0400 	eor.w	r4, r8, r0
+    81c4:	ea04 0509 	and.w	r5, r4, r9
+    81c8:	ea04 0509 	and.w	r5, r4, r9
+    81cc:	462c      	mov	r4, r5
+    81ce:	462c      	mov	r4, r5
+    81d0:	ea00 0508 	and.w	r5, r0, r8
+    81d4:	ea00 0508 	and.w	r5, r0, r8
+    81d8:	4628      	mov	r0, r5
+    81da:	4628      	mov	r0, r5
+    81dc:	ea94 0500 	eors.w	r5, r4, r0
+    81e0:	ea94 0500 	eors.w	r5, r4, r0
+    81e4:	462c      	mov	r4, r5
+    81e6:	462c      	mov	r4, r5
+    81e8:	eb04 0503 	add.w	r5, r4, r3
+    81ec:	eb04 0503 	add.w	r5, r4, r3
+    81f0:	462c      	mov	r4, r5
+    81f2:	462c      	mov	r4, r5
+    81f4:	ab0b      	add	r3, sp, #44	; 0x2c
+    81f6:	ab0b      	add	r3, sp, #44	; 0x2c
+    81f8:	f853 0c04 	ldr.w	r0, [r3, #-4]
+    81fc:	f853 0c04 	ldr.w	r0, [r3, #-4]
+    8200:	6018      	str	r0, [r3, #0]
+    8202:	6018      	str	r0, [r3, #0]
+    8204:	f1a3 0504 	sub.w	r5, r3, #4
+    8208:	f1a3 0504 	sub.w	r5, r3, #4
+    820c:	462b      	mov	r3, r5
+    820e:	462b      	mov	r3, r5
+    8210:	428b      	cmp	r3, r1
+    8212:	428b      	cmp	r3, r1
+    8214:	d1f0      	bne.n	81f8 <sha256+0x1f8>
+    8216:	d1ef      	bne.n	81f8 <sha256+0x1f8>
+    8218:	e74a      	b.n	80b0 <sha256+0xb0>
+    821a:	e749      	b.n	80b0 <sha256+0xb0>
+    821c:	a84b      	add	r0, sp, #300	; 0x12c
+    821e:	a84b      	add	r0, sp, #300	; 0x12c
+    8220:	ac03      	add	r4, sp, #12
+    8222:	ac03      	add	r4, sp, #12
+    8224:	6843      	ldr	r3, [r0, #4]
+    8226:	6843      	ldr	r3, [r0, #4]
+    8228:	6862      	ldr	r2, [r4, #4]
+    822a:	6862      	ldr	r2, [r4, #4]
+    822c:	f104 0504 	add.w	r5, r4, #4
+    8230:	f104 0504 	add.w	r5, r4, #4
+    8234:	462c      	mov	r4, r5
+    8236:	462c      	mov	r4, r5
+    8238:	eb03 0502 	add.w	r5, r3, r2
+    823c:	eb03 0502 	add.w	r5, r3, r2
+    8240:	462b      	mov	r3, r5
+    8242:	462b      	mov	r3, r5
+    8244:	6043      	str	r3, [r0, #4]
+    8246:	6043      	str	r3, [r0, #4]
+    8248:	f100 0504 	add.w	r5, r0, #4
+    824c:	f100 0504 	add.w	r5, r0, #4
+    8250:	4628      	mov	r0, r5
+    8252:	4628      	mov	r0, r5
+    8254:	4584      	cmp	ip, r0
+    8256:	4584      	cmp	ip, r0
+    8258:	d1e4      	bne.n	8224 <sha256+0x224>
+    825a:	d1e3      	bne.n	8224 <sha256+0x224>
+    825c:	9b00      	ldr	r3, [sp, #0]
+    825e:	9b00      	ldr	r3, [sp, #0]
+    8260:	f113 0540 	adds.w	r5, r3, #64	; 0x40
+    8264:	f113 0540 	adds.w	r5, r3, #64	; 0x40
+    8268:	462b      	mov	r3, r5
+    826a:	462b      	mov	r3, r5
+    826c:	9300      	str	r3, [sp, #0]
+    826e:	9300      	str	r3, [sp, #0]
+    8270:	9a01      	ldr	r2, [sp, #4]
+    8272:	9a01      	ldr	r2, [sp, #4]
+    8274:	429a      	cmp	r2, r3
+    8276:	429a      	cmp	r2, r3
+    8278:	f240 80b4 	bls.w	83e4 <sha256+0x3e4>
+    827c:	f240 80b2 	bls.w	83e4 <sha256+0x3e4>
+    8280:	9b02      	ldr	r3, [sp, #8]
+    8282:	9b02      	ldr	r3, [sp, #8]
+    8284:	9a00      	ldr	r2, [sp, #0]
+    8286:	9a00      	ldr	r2, [sp, #0]
+    8288:	1898      	adds	r0, r3, r2
+    828a:	1898      	adds	r0, r3, r2
+    828c:	f10d 0b2c 	add.w	fp, sp, #44	; 0x2c
+    8290:	f10d 0b2c 	add.w	fp, sp, #44	; 0x2c
+    8294:	465c      	mov	r4, fp
+    8296:	465c      	mov	r4, fp
+    8298:	7802      	ldrb	r2, [r0, #0]
+    829a:	7802      	ldrb	r2, [r0, #0]
+    829c:	7843      	ldrb	r3, [r0, #1]
+    829e:	7843      	ldrb	r3, [r0, #1]
+    82a0:	041d      	lsls	r5, r3, #16
+    82a2:	041d      	lsls	r5, r3, #16
+    82a4:	462b      	mov	r3, r5
+    82a6:	462b      	mov	r3, r5
+    82a8:	ea43 6502 	orr.w	r5, r3, r2, lsl #24
+    82ac:	ea43 6502 	orr.w	r5, r3, r2, lsl #24
+    82b0:	462b      	mov	r3, r5
+    82b2:	462b      	mov	r3, r5
+    82b4:	78c2      	ldrb	r2, [r0, #3]
+    82b6:	78c2      	ldrb	r2, [r0, #3]
+    82b8:	ea53 0502 	orrs.w	r5, r3, r2
+    82bc:	ea53 0502 	orrs.w	r5, r3, r2
+    82c0:	462b      	mov	r3, r5
+    82c2:	462b      	mov	r3, r5
+    82c4:	7882      	ldrb	r2, [r0, #2]
+    82c6:	7882      	ldrb	r2, [r0, #2]
+    82c8:	ea43 2502 	orr.w	r5, r3, r2, lsl #8
+    82cc:	ea43 2502 	orr.w	r5, r3, r2, lsl #8
+    82d0:	462b      	mov	r3, r5
+    82d2:	462b      	mov	r3, r5
+    82d4:	6063      	str	r3, [r4, #4]
+    82d6:	6063      	str	r3, [r4, #4]
+    82d8:	f104 0504 	add.w	r5, r4, #4
+    82dc:	f104 0504 	add.w	r5, r4, #4
+    82e0:	462c      	mov	r4, r5
+    82e2:	462c      	mov	r4, r5
+    82e4:	1d05      	adds	r5, r0, #4
+    82e6:	1d05      	adds	r5, r0, #4
+    82e8:	4628      	mov	r0, r5
+    82ea:	4628      	mov	r0, r5
+    82ec:	4574      	cmp	r4, lr
+    82ee:	4574      	cmp	r4, lr
+    82f0:	d1d2      	bne.n	8298 <sha256+0x298>
+    82f2:	d1d1      	bne.n	8298 <sha256+0x298>
+    82f4:	a80c      	add	r0, sp, #48	; 0x30
+    82f6:	a80c      	add	r0, sp, #48	; 0x30
+    82f8:	4680      	mov	r8, r0
+    82fa:	4680      	mov	r8, r0
+    82fc:	6b82      	ldr	r2, [r0, #56]	; 0x38
+    82fe:	6b82      	ldr	r2, [r0, #56]	; 0x38
+    8300:	6844      	ldr	r4, [r0, #4]
+    8302:	6844      	ldr	r4, [r0, #4]
+    8304:	f100 0504 	add.w	r5, r0, #4
+    8308:	f100 0504 	add.w	r5, r0, #4
+    830c:	4628      	mov	r0, r5
+    830e:	4628      	mov	r0, r5
+    8310:	ea4f 43f2 	mov.w	r3, r2, ror #19
+    8314:	ea4f 43f2 	mov.w	r3, r2, ror #19
+    8318:	ea83 4572 	eor.w	r5, r3, r2, ror #17
+    831c:	ea83 4572 	eor.w	r5, r3, r2, ror #17
+    8320:	462b      	mov	r3, r5
+    8322:	462b      	mov	r3, r5
+    8324:	ea83 2592 	eor.w	r5, r3, r2, lsr #10
+    8328:	ea83 2592 	eor.w	r5, r3, r2, lsr #10
+    832c:	462b      	mov	r3, r5
+    832e:	462b      	mov	r3, r5
+    8330:	f8d8 2024 	ldr.w	r2, [r8, #36]	; 0x24
+    8334:	f8d8 2024 	ldr.w	r2, [r8, #36]	; 0x24
+    8338:	f8d8 5000 	ldr.w	r5, [r8]
+    833c:	f8d8 5000 	ldr.w	r5, [r8]
+    8340:	46a8      	mov	r8, r5
+    8342:	46a8      	mov	r8, r5
+    8344:	eb02 0508 	add.w	r5, r2, r8
+    8348:	eb02 0508 	add.w	r5, r2, r8
+    834c:	462a      	mov	r2, r5
+    834e:	462a      	mov	r2, r5
+    8350:	eb03 0502 	add.w	r5, r3, r2
+    8354:	eb03 0502 	add.w	r5, r3, r2
+    8358:	462b      	mov	r3, r5
+    835a:	462b      	mov	r3, r5
+    835c:	ea4f 42b4 	mov.w	r2, r4, ror #18
+    8360:	ea4f 42b4 	mov.w	r2, r4, ror #18
+    8364:	ea82 15f4 	eor.w	r5, r2, r4, ror #7
+    8368:	ea82 15f4 	eor.w	r5, r2, r4, ror #7
+    836c:	462a      	mov	r2, r5
+    836e:	462a      	mov	r2, r5
+    8370:	ea82 05d4 	eor.w	r5, r2, r4, lsr #3
+    8374:	ea82 05d4 	eor.w	r5, r2, r4, lsr #3
+    8378:	462a      	mov	r2, r5
+    837a:	462a      	mov	r2, r5
+    837c:	eb03 0502 	add.w	r5, r3, r2
+    8380:	eb03 0502 	add.w	r5, r3, r2
+    8384:	462b      	mov	r3, r5
+    8386:	462b      	mov	r3, r5
+    8388:	63c3      	str	r3, [r0, #60]	; 0x3c
+    838a:	63c3      	str	r3, [r0, #60]	; 0x3c
+    838c:	42b8      	cmp	r0, r7
+    838e:	42b8      	cmp	r0, r7
+    8390:	d1b2      	bne.n	82f8 <sha256+0x2f8>
+    8392:	d1b1      	bne.n	82f8 <sha256+0x2f8>
+    8394:	9b4c      	ldr	r3, [sp, #304]	; 0x130
+    8396:	9b4c      	ldr	r3, [sp, #304]	; 0x130
+    8398:	9304      	str	r3, [sp, #16]
+    839a:	9304      	str	r3, [sp, #16]
+    839c:	9b4d      	ldr	r3, [sp, #308]	; 0x134
+    839e:	9b4d      	ldr	r3, [sp, #308]	; 0x134
+    83a0:	9305      	str	r3, [sp, #20]
+    83a2:	9305      	str	r3, [sp, #20]
+    83a4:	9b4e      	ldr	r3, [sp, #312]	; 0x138
+    83a6:	9b4e      	ldr	r3, [sp, #312]	; 0x138
+    83a8:	9306      	str	r3, [sp, #24]
+    83aa:	9306      	str	r3, [sp, #24]
+    83ac:	9b4f      	ldr	r3, [sp, #316]	; 0x13c
+    83ae:	9b4f      	ldr	r3, [sp, #316]	; 0x13c
+    83b0:	9307      	str	r3, [sp, #28]
+    83b2:	9307      	str	r3, [sp, #28]
+    83b4:	9b50      	ldr	r3, [sp, #320]	; 0x140
+    83b6:	9b50      	ldr	r3, [sp, #320]	; 0x140
+    83b8:	9308      	str	r3, [sp, #32]
+    83ba:	9308      	str	r3, [sp, #32]
+    83bc:	9b51      	ldr	r3, [sp, #324]	; 0x144
+    83be:	9b51      	ldr	r3, [sp, #324]	; 0x144
+    83c0:	9309      	str	r3, [sp, #36]	; 0x24
+    83c2:	9309      	str	r3, [sp, #36]	; 0x24
+    83c4:	9b52      	ldr	r3, [sp, #328]	; 0x148
+    83c6:	9b52      	ldr	r3, [sp, #328]	; 0x148
+    83c8:	930a      	str	r3, [sp, #40]	; 0x28
+    83ca:	930a      	str	r3, [sp, #40]	; 0x28
+    83cc:	9b53      	ldr	r3, [sp, #332]	; 0x14c
+    83ce:	9b53      	ldr	r3, [sp, #332]	; 0x14c
+    83d0:	930b      	str	r3, [sp, #44]	; 0x2c
+    83d2:	930b      	str	r3, [sp, #44]	; 0x2c
+    83d4:	4b1d      	ldr	r3, [pc, #116]	; (844c <sha256+0x44c>)
+    83d6:	4b1d      	ldr	r3, [pc, #116]	; (844c <sha256+0x44c>)
+    83d8:	f103 0a1c 	add.w	sl, r3, #28
+    83dc:	f103 0a1c 	add.w	sl, r3, #28
+    83e0:	e67e      	b.n	80e0 <sha256+0xe0>
+    83e2:	e67d      	b.n	80e0 <sha256+0xe0>
+    83e4:	a94b      	add	r1, sp, #300	; 0x12c
+    83e6:	a94b      	add	r1, sp, #300	; 0x12c
+    83e8:	9b03      	ldr	r3, [sp, #12]
+    83ea:	9b03      	ldr	r3, [sp, #12]
+    83ec:	a853      	add	r0, sp, #332	; 0x14c
+    83ee:	a853      	add	r0, sp, #332	; 0x14c
+    83f0:	684a      	ldr	r2, [r1, #4]
+    83f2:	684a      	ldr	r2, [r1, #4]
+    83f4:	f101 0504 	add.w	r5, r1, #4
+    83f8:	f101 0504 	add.w	r5, r1, #4
+    83fc:	4629      	mov	r1, r5
+    83fe:	4629      	mov	r1, r5
+    8400:	0e14      	lsrs	r4, r2, #24
+    8402:	0e14      	lsrs	r4, r2, #24
+    8404:	701c      	strb	r4, [r3, #0]
+    8406:	701c      	strb	r4, [r3, #0]
+    8408:	0c14      	lsrs	r4, r2, #16
+    840a:	0c14      	lsrs	r4, r2, #16
+    840c:	705c      	strb	r4, [r3, #1]
+    840e:	705c      	strb	r4, [r3, #1]
+    8410:	0a14      	lsrs	r4, r2, #8
+    8412:	0a14      	lsrs	r4, r2, #8
+    8414:	709c      	strb	r4, [r3, #2]
+    8416:	709c      	strb	r4, [r3, #2]
+    8418:	70da      	strb	r2, [r3, #3]
+    841a:	70da      	strb	r2, [r3, #3]
+    841c:	1d1d      	adds	r5, r3, #4
+    841e:	1d1d      	adds	r5, r3, #4
+    8420:	462b      	mov	r3, r5
+    8422:	462b      	mov	r3, r5
+    8424:	4281      	cmp	r1, r0
+    8426:	4281      	cmp	r1, r0
+    8428:	d1e2      	bne.n	83f0 <sha256+0x3f0>
+    842a:	d1e1      	bne.n	83f0 <sha256+0x3f0>
+    842c:	ad54      	add	r5, sp, #336	; 0x150
+    842e:	ad54      	add	r5, sp, #336	; 0x150
+    8430:	46ad      	mov	sp, r5
+    8432:	46ad      	mov	sp, r5
+    8434:	ad08      	add	r5, sp, #32
+    8436:	ad08      	add	r5, sp, #32
+    8438:	46ad      	mov	sp, r5
+    843a:	46ad      	mov	sp, r5
+    843c:	f1ad 0520 	sub.w	r5, sp, #32
+    8440:	f1ad 0520 	sub.w	r5, sp, #32
+    8444:	e895 8fd0 	ldmia.w	r5, {r4, r6, r7, r8, r9, sl, fp, pc}
+    8448:	e895 8fd0 	ldmia.w	r5, {r4, r6, r7, r8, r9, sl, fp, pc}
+    844c:	00008544 	.word	0x00008544
+
+00008450 <report_error>:
+    8450:	e7fe      	b.n	8450 <report_error>
+    8452:	e7fd      	b.n	8450 <report_error>
+
+00008454 <execute_firmware>:
+    8454:	e90d 4008 	stmdb	sp, {r3, lr}
+    8458:	e90d 4008 	stmdb	sp, {r3, lr}
+    845c:	f1ad 0508 	sub.w	r5, sp, #8
+    8460:	f1ad 0508 	sub.w	r5, sp, #8
+    8464:	46ad      	mov	sp, r5
+    8466:	46ad      	mov	sp, r5
+    8468:	f20f 0e14 	addw	lr, pc, #20
+    846c:	f20f 0e10 	addw	lr, pc, #16
+    8470:	f04e 0e01 	orr.w	lr, lr, #1
+    8474:	f04e 0e01 	orr.w	lr, lr, #1
+    8478:	f7ff bfec 	b.w	8454 <execute_firmware>
+    847c:	f7ff bfea 	b.w	8454 <execute_firmware>
+
+00008480 <verify_and_run_firmware>:
+    8480:	e90d 4010 	stmdb	sp, {r4, lr}
+    8484:	e90d 4010 	stmdb	sp, {r4, lr}
+    8488:	f1ad 0508 	sub.w	r5, sp, #8
+    848c:	f1ad 0508 	sub.w	r5, sp, #8
+    8490:	46ad      	mov	sp, r5
+    8492:	46ad      	mov	sp, r5
+    8494:	f1ad 0520 	sub.w	r5, sp, #32
+    8498:	f1ad 0520 	sub.w	r5, sp, #32
+    849c:	46ad      	mov	sp, r5
+    849e:	46ad      	mov	sp, r5
+    84a0:	4614      	mov	r4, r2
+    84a2:	4614      	mov	r4, r2
+    84a4:	466a      	mov	r2, sp
+    84a6:	466a      	mov	r2, sp
+    84a8:	f20f 0e14 	addw	lr, pc, #20
+    84ac:	f20f 0e10 	addw	lr, pc, #16
+    84b0:	f04e 0e01 	orr.w	lr, lr, #1
+    84b4:	f04e 0e01 	orr.w	lr, lr, #1
+    84b8:	f7ff bda2 	b.w	8000 <sha256>
+    84bc:	f7ff bda0 	b.w	8000 <sha256>
+    84c0:	f89d 2000 	ldrb.w	r2, [sp]
+    84c4:	f89d 2000 	ldrb.w	r2, [sp]
+    84c8:	7823      	ldrb	r3, [r4, #0]
+    84ca:	7823      	ldrb	r3, [r4, #0]
+    84cc:	429a      	cmp	r2, r3
+    84ce:	429a      	cmp	r2, r3
+    84d0:	d12c      	bne.n	852c <verify_and_run_firmware+0xac>
+    84d2:	d12b      	bne.n	852c <verify_and_run_firmware+0xac>
+    84d4:	466b      	mov	r3, sp
+    84d6:	466b      	mov	r3, sp
+    84d8:	4622      	mov	r2, r4
+    84da:	4622      	mov	r2, r4
+    84dc:	f10d 041f 	add.w	r4, sp, #31
+    84e0:	f10d 041f 	add.w	r4, sp, #31
+    84e4:	7858      	ldrb	r0, [r3, #1]
+    84e6:	7858      	ldrb	r0, [r3, #1]
+    84e8:	f103 0501 	add.w	r5, r3, #1
+    84ec:	f103 0501 	add.w	r5, r3, #1
+    84f0:	462b      	mov	r3, r5
+    84f2:	462b      	mov	r3, r5
+    84f4:	7851      	ldrb	r1, [r2, #1]
+    84f6:	7851      	ldrb	r1, [r2, #1]
+    84f8:	f102 0501 	add.w	r5, r2, #1
+    84fc:	f102 0501 	add.w	r5, r2, #1
+    8500:	462a      	mov	r2, r5
+    8502:	462a      	mov	r2, r5
+    8504:	4288      	cmp	r0, r1
+    8506:	4288      	cmp	r0, r1
+    8508:	d110      	bne.n	852c <verify_and_run_firmware+0xac>
+    850a:	d10f      	bne.n	852c <verify_and_run_firmware+0xac>
+    850c:	42a3      	cmp	r3, r4
+    850e:	42a3      	cmp	r3, r4
+    8510:	d1e8      	bne.n	84e4 <verify_and_run_firmware+0x64>
+    8512:	d1e7      	bne.n	84e4 <verify_and_run_firmware+0x64>
+    8514:	f20f 0e14 	addw	lr, pc, #20
+    8518:	f20f 0e10 	addw	lr, pc, #16
+    851c:	f04e 0e01 	orr.w	lr, lr, #1
+    8520:	f04e 0e01 	orr.w	lr, lr, #1
+    8524:	f7ff bf96 	b.w	8454 <execute_firmware>
+    8528:	f7ff bf94 	b.w	8454 <execute_firmware>
+    852c:	f20f 0e14 	addw	lr, pc, #20
+    8530:	f20f 0e10 	addw	lr, pc, #16
+    8534:	f04e 0e01 	orr.w	lr, lr, #1
+    8538:	f04e 0e01 	orr.w	lr, lr, #1
+    853c:	f7ff bf88 	b.w	8450 <report_error>
+    8540:	f7ff bf86 	b.w	8450 <report_error>
+    8544:	6a09e667 	.word	0x6a09e667
+    8548:	bb67ae85 	.word	0xbb67ae85
+    854c:	3c6ef372 	.word	0x3c6ef372
+    8550:	a54ff53a 	.word	0xa54ff53a
+    8554:	510e527f 	.word	0x510e527f
+    8558:	9b05688c 	.word	0x9b05688c
+    855c:	1f83d9ab 	.word	0x1f83d9ab
+    8560:	5be0cd19 	.word	0x5be0cd19
+
+00008564 <constants>:
+    8564:	428a2f98 71374491 b5c0fbcf e9b5dba5     ./.B.D7q........
+    8574:	3956c25b 59f111f1 923f82a4 ab1c5ed5     [.V9...Y..?..^..
+    8584:	d807aa98 12835b01 243185be 550c7dc3     .....[....1$.}.U
+    8594:	72be5d74 80deb1fe 9bdc06a7 c19bf174     t].r........t...
+    85a4:	e49b69c1 efbe4786 0fc19dc6 240ca1cc     .i...G.........$
+    85b4:	2de92c6f 4a7484aa 5cb0a9dc 76f988da     o,.-..tJ...\...v
+    85c4:	983e5152 a831c66d b00327c8 bf597fc7     RQ>.m.1..'....Y.
+    85d4:	c6e00bf3 d5a79147 06ca6351 14292967     ....G...Qc..g)).
+    85e4:	27b70a85 2e1b2138 4d2c6dfc 53380d13     ...'8!...m,M..8S
+    85f4:	650a7354 766a0abb 81c2c92e 92722c85     Ts.e..jv.....,r.
+    8604:	a2bfe8a1 a81a664b c24b8b70 c76c51a3     ....Kf..p.K..Ql.
+    8614:	d192e819 d6990624 f40e3585 106aa070     ....$....5..p.j.
+    8624:	19a4c116 1e376c08 2748774c 34b0bcb5     .....l7.LwH'...4
+    8634:	391c0cb3 4ed8aa4a 5b9cca4f 682e6ff3     ...9J..NO..[.o.h
+    8644:	748f82ee 78a5636f 84c87814 8cc70208     ...toc.x.x......
+    8654:	90befffa a4506ceb bef9a3f7 c67178f2     .....lP......xq.
